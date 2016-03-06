@@ -1,6 +1,5 @@
 # 395 assignment and blog #1
 # Khoa Huynh (1628858)
-======
 
 # About me
 ======
@@ -30,11 +29,11 @@ and confusion for users. The following is an excerpt from Waterbear's code and s
 
 
 
-[![Waterbear 1](https://github.com/huynhk3/waterbear/raw/master/img/example1.png)](#features)
+[![Waterbear 1](https://github.com/huynhk3/waterbear/blob/master/example1.png)](#features)
 ======
-[![Waterbear 2](https://github.com/huynhk3/waterbear/raw/master/img/example2.png)](#features)
+[![Waterbear 2](https://github.com/huynhk3/waterbear/blob/master/example2.png)](#features)
 ======
-[![Waterbear 3](https://github.com/huynhk3/waterbear/raw/master/img/example3.png)](#features)
+[![Waterbear 3](https://github.com/huynhk3/waterbear/blob/master/example3.png)](#features)
 
 
                 // Create variable block to wrap the expression.
@@ -78,6 +77,6 @@ $(function() {
     }, 1000);
 });
 
-I am a bit new with JS, but adding this glowing effect while the user clicks on certain blocks to see which can be combined 
+I am a bit new with JS, but I think adding this glowing effect while the user clicks on certain blocks to see which can be combined 
 what would be helpful in my opinion. That way, people can immediately figure out that the blocks are broken down in components,
 and can be put into other glowing sections with other specific blocks.
