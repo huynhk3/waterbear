@@ -77,3 +77,27 @@ variable block altogether, but to add functionality to distinguish on which part
 I am a bit new with JS, but I think adding this glowing effect while the user clicks on certain blocks to see which can be combined 
 what would be helpful in my opinion. That way, people can immediately figure out that the blocks are broken down in components,
 and can be put into other glowing sections with other specific blocks.
+
+
+# March 15, 2016
+When working with Waterbear, a simple way to know if the application is working is having a simple print statement that usually
+prints out, "Hello World!" Setting this up in Waterbear can be a little bit vague, but once you understand the basic functionality
+of the website, then it should be a simple task. However, there is a small bug where when outputting text with the 'fill text'
+block, which prints out text to the output window, where you cannot use the formatting parameters and blocks. Below is an issue
+(https://github.com/waterbearlang/waterbear/issues/1324) I've posted to Waterbear's github:
+
+
+[![Waterbear 1](https://github.com/huynhk3/waterbear/blob/master/example4.png)](#features)
+
+
+In this picture, the bottom block is the one which outputs text, and the top block is the one which modifies the text. When
+running the program with different values for the modifying block gives no results. This could be a bug with the blocks themselves
+or perhaps the function to run the program, I suspect it to be the blocks though.
+
+Looking closer at the code with debug in chrome, I noticed this anomaly:
+
+[![Waterbear 1](https://github.com/huynhk3/waterbear/blob/master/example5.png)](#features)
+[![Waterbear 1](https://github.com/huynhk3/waterbear/blob/master/example6.png)](#features)
+
+When changing the value in the block, the value does change in the code, but does not change the px size at all. Perhaps this
+is what is causing the problem? I suspect something is causing a problem with that specific class.
