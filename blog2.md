@@ -8,12 +8,14 @@ Since the last blog update, I've done some research on why the font-size changin
 Looking at it more closely, I noticed a function that was related to the input section for changing the font size:
 
 [![Waterbear 7](https://github.com/huynhk3/waterbear/blob/master/example7.png)](#features)
-Figure 1: areas related to the font-size block
+======
+*Figure 1: areas related to the font-size block*
 
 Expanding on this function gives us:
 
 [![Waterbear 8](https://github.com/huynhk3/waterbear/blob/master/example8.png)](#features)
-Figure 2: Font-size block's javascript function
+======
+*Figure 2: Font-size block's javascript function*
 
 After finally isolating where the function is, I looked up the documentation at: http://www.w3schools.com/tags/ref_canvas.asp
 and http://www.w3schools.com/tags/canvas_font.asp (this one specifically is related to the font problem). Comparing Waterbear's
@@ -23,10 +25,12 @@ is collected through the box's input box, and saved in the variable "size" as se
 Running an online application to test the code, I found these results:
 
 [![Waterbear 10](https://github.com/huynhk3/waterbear/blob/master/example10.png)](#features)
-Figure 3: Online testing with hard-coding
 ======
+*Figure 3: Online testing with hard-coding*
+
 [![Waterbear 11](https://github.com/huynhk3/waterbear/blob/master/example11.png)](#features)
-Figure 4: Online testing without hard-coding
+======
+*Figure 4: Online testing without hard-coding*
 
 Hard coding the values changes the size of the font, but using a variable like how Waterbear handles their function doesn't
 change the font at all! Was the size variable not passing the value correctly? Well, looking at figure 4, you can see I used 
