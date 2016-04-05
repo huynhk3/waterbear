@@ -1439,7 +1439,7 @@
             },
             setFont: function(size, fontStyle) {
                 var sizeString = size[0] + size[1];
-                getContext().font = sizeString + " " + fontStyle;
+                getContext().font = size + ' ' + fontStyle;
 
             },
             textAlign: function(alignment) {

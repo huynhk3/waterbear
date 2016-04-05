@@ -1,5 +1,5 @@
 # 395 assignment and blog #1
-# Khoa Huynh (1628858)
+# Khoa Huynh
 
 # About me
 Many people when they start out programming suffer from a common syndrome called the, "imposter syndrome.” 
