@@ -36,3 +36,46 @@ Hard coding the values changes the size of the font, but using a variable like h
 change the font at all! Was the size variable not passing the value correctly? Well, looking at figure 4, you can see I used 
 window.alert(size[0] + size[1]) to debug, and oddly enough, the value was properly passed! So what's going on here? Find out in
 the next blog! (maybe)
+
+# April 9, 2016
+Quick and successful update coming up! As of this blog update, the font size mystery has been solved and is working properly!
+
+I've updated the issue on Waterbear's github as well: https://github.com/waterbearlang/waterbear/issues/1324
+
+So, what was the problem? Well at first, I thought the size parameter and sizeString variables were either not returning whatever
+was intended, so I had used an alert window pop up with the size variables, and suprisingly the values were correct. What actually
+was the problem was 'fontStyle' in the parameters of setFont. For whatever reason (didn't bother doing research on why it was doing
+it), it was returning an integer of 2. To fix this, I found a method to collect the user's text input, save it into a new variable
+and replace fontStyle. 
+
+[![Waterbear 11](https://github.com/huynhk3/waterbear/blob/master/example13.png)](#features)
+##### *Figure 5: IDs related to their respective objects*
+
+#### Before:
+
+[![Waterbear 8](https://github.com/huynhk3/waterbear/blob/master/example8.png)](#features)
+
+#### After:
+
+[![Waterbear 8](https://github.com/huynhk3/waterbear/blob/master/example14.png)](#features)
+
+
+In the part:
+
+        var family = document.getElementById("familyText").value;
+
+the text in which the user inputs would be saved into 'family', and is grabbed from the HTML seen in Figure 5. The ID, "familyText",
+had to be added inside the tag so that it may be called and grab the input to be saved.
+
+
+Now, in case you didn't notice, there is another thing that had to be changed as well. For the font block that is used for changing
+sizes and font face, there is a selection list for size formatting (px, em, %, pt), and none of them work properly (as in not at all).
+For this to be fixed, I had to use the method in the code:
+
+        var list = document.getElementById("fontSizeList").selectedIndex;
+
+where it grabs the ID from the HTML similar to what was used for font families, returns which option in the selection list was 
+selected, and saves it into 'list'. The index of the selected option would be called in the if statements and print out the proper size
+configuration.
+
+After all that, it finally works properly! Yay! Maybe I'll do a pull request...

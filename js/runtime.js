@@ -6,6 +6,9 @@
     var _canvas, _ctx;
     var song = "o4 l4 V12 ";
     var current_octave = 4;
+    var fontBase = 1000;
+    var fontSize = 70;
+    var ratio;
 
     function canvas() {
         if (!_canvas) {
@@ -1437,10 +1440,19 @@
             endsWith: function(x, y) {
                 return x.indexOf(y, x.length - y.length) !== -1;
             },
-            setFont: function(size, fontStyle) {
+            setFont: function(size) {
                 var sizeString = size[0] + size[1];
-                getContext().font = size + ' ' + fontStyle;
-
+                var list = document.getElementById("fontSizeList").selectedIndex;
+                var family = document.getElementById("familyText").value;
+                if (list == 0) {
+                  getContext().font = size + "px " + family;
+                } else if (list == 1) {
+                  getContext().font = size + "em " + family;
+                } else if (list == 2) {
+                  getContext().font = size + "% " + family;
+                } else if (list == 3) {
+                  getContext().font = size + "pt " + family;
+                }
             },
             textAlign: function(alignment) {
                 getContext().textAlign = alignment;
