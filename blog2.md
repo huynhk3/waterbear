@@ -64,11 +64,11 @@ In the part:
 
         var family = document.getElementById("familyText").value;
 
-the text in which the user inputs would be saved into 'family', and is grabbed from the HTML seen in Figure 5. The ID, "familyText",
-had to be added inside the tag so that it may be called and grab the input to be saved.
+the text in which the user inputs would be saved into 'family', and is grabbed from the HTML with document.getElementById as seen in Figure 5. The ID, "familyText",
+had to be added inside the HTML tag so that it may be called and grab the input to be saved.
 
 
-Now, in case you didn't notice, there is another thing that had to be changed as well. For the font block that is used for changing
+Now, in case you didn't notice, there is another bug that needed to be fixed as well. For the font block that is used for changing
 sizes and font face, there is a selection list for size formatting (px, em, %, pt), and none of them work properly (as in not at all).
 For this to be fixed, I had to use the method in the code:
 
