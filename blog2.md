@@ -48,7 +48,7 @@ was the problem was 'fontStyle' in the parameters of setFont. For whatever reaso
 it), it was returning an integer of 2. To fix this, I found a method to collect the user's text input, save it into a new variable
 and replace fontStyle. 
 
-[![Waterbear 11](https://github.com/huynhk3/waterbear/blob/master/example13.png)](#features)
+[![Waterbear 13](https://github.com/huynhk3/waterbear/blob/master/example13.png)](#features)
 ##### *Figure 5: IDs related to their respective objects*
 
 #### Before:
@@ -57,7 +57,7 @@ and replace fontStyle.
 
 #### After:
 
-[![Waterbear 8](https://github.com/huynhk3/waterbear/blob/master/example14.png)](#features)
+[![Waterbear 14](https://github.com/huynhk3/waterbear/blob/master/example14.png)](#features)
 
 
 In the part:
